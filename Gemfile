@@ -42,6 +42,9 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
 
 group :development, :test do
+  # Errors gems (RP)
+  gem "better_errors"
+  gem "binding_of_caller"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
