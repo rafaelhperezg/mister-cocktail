@@ -6,7 +6,8 @@
         <% @doses.each do |dose| %>
           <li>
             <%= dose.description %> - <%= dose.ingredient.name %>
-            <%= link_to "Delete dose", cocktail_dose_path(@cocktail,dose), class: "btn btn-primary" %>
+            <%= link_to "Delete dose", cocktail_dose_path(@cocktail, dose), method: :delete,
+            data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
           </li>
 
         <% end %>
