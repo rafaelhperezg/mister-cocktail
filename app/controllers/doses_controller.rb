@@ -1,17 +1,20 @@
 class DosesController < ApplicationController
-  before_action :find_cocktail, only: [ :new, :create ]
+  before_action :find_cocktail, only: [ :new, :create, :destroy ]
 
-   def new
+  def new
     # a supprimer si je le mets dans le show de cocktail
-     @dose = Dose.new
-     # @ingredients = Ingredient.all
-   end
+    @dose = Dose.new
+    # @ingredients = Ingredient.all
+  end
 
-   def create
-     @dose = @cocktail.doses.build(dose_params)
-     @dose.save
-     redirect_to cocktail_path(@cocktail)
-   end
+  def create
+    @dose = @cocktail.doses.build(dose_params)
+    @dose.save
+    redirect_to cocktail_path(@cocktail)
+  end
+
+
+
 
   private
 
@@ -23,6 +26,9 @@ class DosesController < ApplicationController
      @cocktail = Cocktail.find(params[:cocktail_id])
    end
 
+   # def find_cocktail
+   #   @cocktail = Cocktail.find(params[:cocktail_id])
+   # end
 end
 
 
