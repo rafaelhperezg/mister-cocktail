@@ -42,8 +42,12 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
 
 
-#serurity gem PR
+# serurity gem PR
 gem 'figaro'
+
+# paperclip gem
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
 
 group :development, :test do
   # Errors gems (RP)
