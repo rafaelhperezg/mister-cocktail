@@ -5,6 +5,7 @@
       <h2>Please enter information of the Cocktail you want to create</h2>
       <%= simple_form_for @cocktail do |f| %>
         <%= f.input :name %>
+        <%= f.input :picture %>
         <%= f.button :submit %>
       <% end %>
       <% cocktail_id = @cocktail.id %>

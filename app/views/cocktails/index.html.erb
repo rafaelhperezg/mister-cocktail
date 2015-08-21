@@ -11,6 +11,7 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-4">
         <h2><%= cocktail.name %></h2>
+        <%= image_tag cocktail.picture.url(:thumb) %>
         <%= link_to "Show Cocktail", cocktail_path(cocktail), class: "btn btn-primary" %>
       </div>
     <% end %>
