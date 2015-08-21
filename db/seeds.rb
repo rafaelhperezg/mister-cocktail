@@ -46,6 +46,7 @@ ingredients = [
 'Lime Juice',
 'Marmalade',
 'Milk',
+'Mint',
 'Nutmeg',
 'Orange Juice',
 'Pepper',
@@ -71,7 +72,7 @@ ingredients = [
 ]
 ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
 
-# Cocktail.destroy_all
+Cocktail.destroy_all
 
 # cocktails = [
 #   {
