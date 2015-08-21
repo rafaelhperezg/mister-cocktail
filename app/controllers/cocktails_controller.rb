@@ -32,3 +32,5 @@ class CocktailsController < ApplicationController
       @cocktail = Cocktail.find(params[:id])
     end
 end
+
+
