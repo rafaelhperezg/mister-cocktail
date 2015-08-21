@@ -1,12 +1,6 @@
 class DosesController < ApplicationController
   before_action :find_cocktail, only: [ :new, :create, :destroy ]
 
-  def new
-    # a supprimer si je le mets dans le show de cocktail
-    @dose = Dose.new
-    # @ingredients = Ingredient.all
-  end
-
   def create
     @dose = @cocktail.doses.build(dose_params)
     @dose.save
@@ -31,6 +25,3 @@ class DosesController < ApplicationController
    end
 
 end
-
-
-# AJOUTER DESTROY!!!

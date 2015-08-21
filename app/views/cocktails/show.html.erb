@@ -7,13 +7,25 @@
           <li>
             <%= dose.description %> - <%= dose.ingredient.name %>
             <%= link_to "Delete dose", cocktail_dose_path(@cocktail, dose), method: :delete,
-            data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
+            data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
           </li>
 
         <% end %>
       </ul>
       <%= link_to "Back to list", cocktails_path, class: "btn btn-primary" %>
-      <%= link_to "Add doses for this cocktail", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center">
+        <h3>Add doses to this Cocktail</h3>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.input :description %>
+          <%= f.input :ingredient_id, collection: Ingredient.all , prompt: "Ingredients"  %>
+          <%= f.button :submit, html: { class: "btn btn-primary-success"} %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

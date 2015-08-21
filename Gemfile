@@ -41,6 +41,10 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
 
+
+#serurity gem PR
+gem 'figaro'
+
 group :development, :test do
   # Errors gems (RP)
   gem "better_errors"

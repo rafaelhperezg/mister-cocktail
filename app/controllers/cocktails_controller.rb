@@ -19,6 +19,7 @@ class CocktailsController < ApplicationController
       # line below not necessary because we have the before.... with the private method
       # @restaurant = Restaurant.find(params[:id])  #I receive the params when the user click on the link Show task
       @doses = @cocktail.doses
+      @dose = Dose.new
     end
 
   private
